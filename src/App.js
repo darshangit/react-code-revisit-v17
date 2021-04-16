@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Wrapper from "./components/Helpers/Wrapper";
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
 
@@ -15,10 +16,11 @@ function App() {
   };
 
   return (
-    <div>
+    //This is a syntax for wrapping can use React.Fragment
+    <>
       <AddUser onAdduser={setUsersHandler} />
       <UsersList users={usersList} />
-    </div>
+    </>
   );
 }
 
